@@ -14,6 +14,7 @@
         return (double)tv.tv_sec + (double)tv.tv_usec / 1000000.0;
     }
     void omp_set_num_threads(int num_threads) { (void)num_threads; }
+    int omp_get_num_procs() { return 1; }
 #endif
 
 volatile int progress = 0; // Global variable to track progress
@@ -78,22 +79,23 @@ void merge(float arr[], int left, int mid, int right) {
 }
 
 void parallelSort(float arr[], int n) {
-    int mid = n / 2;
+    int num_procs = omp_get_num_procs();
+    int chunk_size = n / num_procs;
 
-    #pragma omp parallel sections
+    #pragma omp parallel
     {
-        #pragma omp section
-        {
-            combSort(arr, mid);
-        }
-        #pragma omp section
-        {
-            combSort(arr + mid, n - mid);
-        }
+        int tid = omp_get_thread_num();
+        int start = tid * chunk_size;
+        int end = (tid == num_procs - 1) ? n : start + chunk_size;
+        combSort(arr + start, end - start);
     }
 
-    merge(arr, 0, mid - 1, n - 1);
+    #pragma omp barrier
+    for (int i = 1; i < num_procs; i++) {
+        merge(arr, 0, i * chunk_size - 1, (i + 1) * chunk_size - 1);
+    }
 }
+
 
 unsigned int custom_seed(int iteration, int element) {
     return (unsigned int)(iteration * 12345 + element * 67890);
@@ -183,6 +185,7 @@ int main(int argc, char* argv[]) {
 
                 // Отсортировать массив с результатами указанным методом
                 parallelSort(M2, N / 2);
+
 
                 // Рассчитать сумму синусов тех элементов массива М2, которые при делении на минимальный ненулевой элемент массива М2 дают четное число
                 float min = M2[0];

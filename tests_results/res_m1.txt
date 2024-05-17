@@ -98,8 +98,7 @@ X: -0.146555
 X: -0.158695
 X: -0.150934
 X: -0.160917
-Progress: 100%
-N=10000. Milliseconds passed=35
+N=10000. Milliseconds passed=32
 X: -1.820374
 X: -1.814003
 X: -1.741853
@@ -200,8 +199,7 @@ X: -1.887214
 X: -1.767853
 X: -1.885627
 X: -1.820611
-Progress: 100%
-N=124000. Milliseconds passed=437
+N=124000. Milliseconds passed=434
 X: -3.526353
 X: -3.449812
 X: -3.358933
@@ -302,8 +300,7 @@ X: -3.603702
 X: -3.473619
 X: -3.595624
 X: -3.462034
-Progress: 100%
-N=238000. Milliseconds passed=857
+N=238000. Milliseconds passed=846
 X: -5.212638
 X: -5.053242
 X: -4.941556
@@ -404,8 +401,7 @@ X: -5.287514
 X: -5.054525
 X: -5.228486
 X: -5.160141
-Progress: 100%
-N=352000. Milliseconds passed=1270
+N=352000. Milliseconds passed=1268
 X: -6.839465
 X: -6.812034
 X: -6.714751
@@ -506,7 +502,6 @@ X: -7.016961
 X: -6.728954
 X: -6.903153
 X: -6.826329
-Progress: 100%
 N=466000. Milliseconds passed=1700
 X: -8.516686
 X: -8.448376
@@ -608,8 +603,7 @@ X: -8.720380
 X: -8.308593
 X: -8.597226
 X: -8.588758
-Progress: 100%
-N=580000. Milliseconds passed=2146
+N=580000. Milliseconds passed=2147
 X: -10.232304
 X: -10.083457
 X: -10.053620
@@ -710,8 +704,7 @@ X: -10.393025
 X: -9.962821
 X: -10.347825
 X: -10.229070
-Progress: 100%
-N=694000. Milliseconds passed=2557
+N=694000. Milliseconds passed=2562
 X: -11.887166
 X: -11.730186
 X: -11.713843
@@ -812,8 +805,7 @@ X: -12.003160
 X: -11.586461
 X: -11.976844
 X: -11.974965
-Progress: 100%
-N=808000. Milliseconds passed=3018
+N=808000. Milliseconds passed=3023
 X: -13.598205
 X: -13.395759
 X: -13.557416
@@ -914,8 +906,7 @@ X: -13.694438
 X: -13.233046
 X: -13.714143
 X: -13.565843
-Progress: 100%
-N=922000. Milliseconds passed=3434
+N=922000. Milliseconds passed=3416
 X: -15.330519
 X: -15.066610
 X: -15.262562
@@ -1016,8 +1007,7 @@ X: -15.438406
 X: -14.943046
 X: -15.397508
 X: -15.279673
-Progress: 100%
-N=1036000. Milliseconds passed=3873
+N=1036000. Milliseconds passed=3839
 X: -16.970398
 X: -16.673548
 X: -16.914520
@@ -1118,5 +1108,4 @@ X: -17.190523
 X: -16.597216
 X: -17.118431
 X: -16.924583
-Progress: 100%
-N=1150000. Milliseconds passed=4222
+N=1150000. Milliseconds passed=4227
