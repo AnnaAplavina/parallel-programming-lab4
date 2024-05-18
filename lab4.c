@@ -90,7 +90,7 @@ void parallelSort(float arr[], int n) {
         combSort(arr + start, end - start);
     }
 
-    #pragma omp barrier
+    // #pragma omp barrier
     for (int i = 1; i < num_procs; i++) {
         merge(arr, 0, i * chunk_size - 1, (i + 1) * chunk_size - 1);
     }
