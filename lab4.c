@@ -6,7 +6,6 @@
 #ifdef _OPENMP
     #include <omp.h>
 #else
-// Define alternative implementations for OpenMP functions if not available
     int omp_get_num_threads() { return 1; }
     double omp_get_wtime() {
         struct timeval tv;
@@ -90,7 +89,6 @@ void parallelSort(float arr[], int n) {
         combSort(arr + start, end - start);
     }
 
-    // #pragma omp barrier
     for (int i = 1; i < num_procs; i++) {
         merge(arr, 0, i * chunk_size - 1, (i + 1) * chunk_size - 1);
     }
@@ -202,7 +200,6 @@ int main(int argc, char* argv[]) {
                 free(M1);
                 free(M2);
 
-                // Update progress
                 #pragma omp atomic
                 progress++;
             }
